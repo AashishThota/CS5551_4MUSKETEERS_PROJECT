@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
-TextView signup;
+TextView signup1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        signup= (TextView)findViewById(R.id.signuplink);
-        signup.setOnClickListener(new View.OnClickListener() {
+        signup1= (TextView)findViewById(R.id.signuplink);
+        signup1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent reg= new Intent(Login.this,Register.class);
