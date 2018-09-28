@@ -11,6 +11,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+=======
+>>>>>>> fe45c4f7dc29b6ca5c79141d327edf106705d39a
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -21,6 +30,13 @@ import com.google.android.gms.common.api.GoogleApi;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.Task;
 
+<<<<<<< HEAD
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+=======
+>>>>>>> fe45c4f7dc29b6ca5c79141d327edf106705d39a
 public class Login extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener  {
     private static final int RC_SIGN_IN =9001 ;
     TextView signup1;
@@ -28,16 +44,55 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
     GoogleSignInOptions gso;
     GoogleSignInClient mGoogleSignInClient;
     GoogleSignInOptions mGoogleSignInOptions;
+<<<<<<< HEAD
+    Button fblog;
+    CallbackManager cbm;
+=======
+>>>>>>> fe45c4f7dc29b6ca5c79141d327edf106705d39a
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login);
         findViewById(R.id.sign_in_button).setOnClickListener(this);;
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
+<<<<<<< HEAD
+        fblog=(Button)findViewById(R.id.fblog);
+        mGoogleSignInClient= GoogleSignIn.getClient(this,gso);
+        cbm=CallbackManager.Factory.create();
+        fblog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginManager.getInstance().logInWithReadPermissions(Login.this, Arrays.asList("public_profile","email","user_friends"));
+
+            }
+        });
+        LoginManager.getInstance().registerCallback(cbm,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        // App code
+                        Toast.makeText(Login.this,loginResult.getAccessToken().getUserId(),Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // App code
+                        Toast.makeText(Login.this,"sorry ",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        // App code
+                        Toast.makeText(Login.this,exception.toString(),Toast.LENGTH_SHORT).show();
+                    }
+                });
+=======
         mGoogleSignInClient= GoogleSignIn.getClient(this,gso);
 
+>>>>>>> fe45c4f7dc29b6ca5c79141d327edf106705d39a
         signup1= (TextView)findViewById(R.id.signuplink);
         signup1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +102,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
             }
         });
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> fe45c4f7dc29b6ca5c79141d327edf106705d39a
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -58,6 +117,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
         }
+<<<<<<< HEAD
+        else {
+            cbm.onActivityResult(requestCode,resultCode,data);
+        }
+=======
+>>>>>>> fe45c4f7dc29b6ca5c79141d327edf106705d39a
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
@@ -80,7 +145,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
             case R.id.sign_in_button:
                 signIn();
                 break;
+<<<<<<< HEAD
+
+
+        }
+=======
     }
+>>>>>>> fe45c4f7dc29b6ca5c79141d327edf106705d39a
 }
 
     @Override
