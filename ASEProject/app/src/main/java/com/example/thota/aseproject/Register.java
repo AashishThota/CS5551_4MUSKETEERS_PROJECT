@@ -1,6 +1,7 @@
 package com.example.thota.aseproject;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,6 +56,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     if(task.isSuccessful()){
                         Toast.makeText(Register.this,"registration successful",Toast.LENGTH_SHORT).show();
                         pd.cancel();
+                        Intent intent=new Intent(Register.this,Login.class);
+                        startActivity(intent);
                     }
                     else
                     {
