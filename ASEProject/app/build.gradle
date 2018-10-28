@@ -34,8 +34,11 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:16.0.3'
     compile 'com.google.android.gms:play-services-auth:15.0.1'
     implementation 'com.facebook.android:facebook-login:[4,5)'
+<<<<<<< HEAD
     implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'com.ibm.watson.developer_cloud:java-sdk:6.7.0'
+=======
+>>>>>>> 415970a244a1ff6aa8d47d256222a7d71e7e7441
 }
 apply plugin: 'com.google.gms.google-services'

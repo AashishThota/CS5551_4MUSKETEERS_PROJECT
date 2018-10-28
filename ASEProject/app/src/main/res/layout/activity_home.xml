@@ -8,7 +8,11 @@
     android:background="@drawable/soulrecipe">
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/ScanButton"
+=======
+        android:id="@+id/button"
+>>>>>>> 415970a244a1ff6aa8d47d256222a7d71e7e7441
         android:layout_width="122dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -23,6 +27,7 @@
         app:layout_constraintVertical_bias="0.962" />
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/addItem"
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
@@ -33,6 +38,18 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+=======
+        android:id="@+id/button4"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+>>>>>>> 415970a244a1ff6aa8d47d256222a7d71e7e7441
 
         android:drawableRight="@drawable/additem"
         android:text="Add Items"
@@ -40,7 +57,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.926"
+<<<<<<< HEAD
         app:layout_constraintStart_toEndOf="@+id/ScanButton"
+=======
+        app:layout_constraintStart_toEndOf="@+id/button"
+>>>>>>> 415970a244a1ff6aa8d47d256222a7d71e7e7441
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.962" />
 

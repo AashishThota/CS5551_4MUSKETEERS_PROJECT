@@ -4,7 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+=======
+>>>>>>> 415970a244a1ff6aa8d47d256222a7d71e7e7441
 
     <application
         android:allowBackup="true"
@@ -20,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -31,6 +35,15 @@
         <activity android:name=".Scan" />
         <activity android:name=".addList" />
         <activity android:name=".recipe"></activity>
+=======
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+        <activity android:name=".Login" />
+
+        <activity android:name=".Register"></activity>
+
+        <activity android:name=".Home"></activity>
+>>>>>>> 415970a244a1ff6aa8d47d256222a7d71e7e7441
     </application>
 
 </manifest>
