@@ -1,5 +1,5 @@
 package com.example.thota.aseproject;
-
+//This page consists of two buttons one for scanning the items and the other button for adding the items
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
