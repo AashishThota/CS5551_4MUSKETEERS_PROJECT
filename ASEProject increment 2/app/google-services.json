@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "158862356366",
+    "firebase_url": "https://aseproject-a8d8b.firebaseio.com",
+    "project_id": "aseproject-a8d8b",
+    "storage_bucket": "aseproject-a8d8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158862356366:android:08e117f81926edcb",
+        "android_client_info": {
+          "package_name": "com.example.thota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158862356366-eso9089vp9g0td5359dnlv5s3ghe25cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD20TqKVuo_K69W5sILorufr43iJvOuYAE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158862356366:android:57ac4d8eacd8bca5",
+        "android_client_info": {
+          "package_name": "com.example.thota.aseproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158862356366-eso9089vp9g0td5359dnlv5s3ghe25cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD20TqKVuo_K69W5sILorufr43iJvOuYAE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
