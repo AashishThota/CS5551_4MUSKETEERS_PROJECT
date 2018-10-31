@@ -21,6 +21,7 @@ public class Home extends AppCompatActivity {
                 startActivity(scanner);
             }
         });
+        //we are calling the addList activity
         additem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
