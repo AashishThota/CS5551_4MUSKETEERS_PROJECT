@@ -25,6 +25,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent addlistitem = new Intent(Home.this,addList.class);
+                addlistitem.putExtra("item","");
                 startActivity(addlistitem);
             }
         });
