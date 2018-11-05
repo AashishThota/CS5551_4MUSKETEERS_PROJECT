@@ -3,6 +3,8 @@ package com.example.thota.aseproject;
 
 import android.content.Intent;
 =======
+// this page is used to display the recipies from the added items.
+>>>>>>> 6a1e89cd41e03f7cb39bed0dd547fbde432b028a
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
