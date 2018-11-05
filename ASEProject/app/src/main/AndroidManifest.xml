@@ -30,7 +30,8 @@
         <activity android:name=".Home" />
         <activity android:name=".Scan" />
         <activity android:name=".addList" />
-        <activity android:name=".recipe"></activity>
+        <activity android:name=".recipe" />
+        <activity android:name=".MainRecipe"></activity>
     </application>
 
 </manifest>

@@ -12,12 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 
 public class addList extends AppCompatActivity {
-    List<String> items= new ArrayList<String>();
+   static List<String> items= new ArrayList<String>();
     EditText item;
     Button add1,conti,bck;
     ListView list1;
@@ -28,7 +28,8 @@ public class addList extends AppCompatActivity {
         add1=(Button)findViewById(R.id.add);
         item=(EditText)findViewById(R.id.itemname);
         list1=(ListView)findViewById(R.id.list);
-        conti=(Button)findViewById(R.id.contin);
+        conti=(Button)findViewById(R.id.reci);
+
         bck=(Button)findViewById(R.id.bck);
         bck.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +41,9 @@ public class addList extends AppCompatActivity {
         conti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent recipe= new Intent(addList.this,com.example.thota.aseproject.recipe.class);
+                recipe.putExtra("items", (Serializable) items);
+                startActivity(recipe);
             }
         });
         Intent intent=getIntent();
