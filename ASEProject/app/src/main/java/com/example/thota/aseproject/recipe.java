@@ -1,15 +1,14 @@
 package com.example.thota.aseproject;
-<<<<<<< HEAD
+
 
 import android.content.Intent;
-=======
-// this page is used to display the recipies from the added items.
->>>>>>> 6a1e89cd41e03f7cb39bed0dd547fbde432b028a
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -23,6 +22,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -32,14 +32,20 @@ import okhttp3.Response;
 
 public class recipe extends AppCompatActivity {
 ListView list;
+
 static  volatile JSONArray recipelist;
 ArrayList<String> items= new ArrayList<String>();
+List<Integer> itemids = new ArrayList<Integer>();
+    CustomAdapter customadapter= new CustomAdapter();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe);
         Intent intent=getIntent();
         items=intent.getStringArrayListExtra("items");
+        list = (ListView)findViewById(R.id.itemslist);
+        list = (ListView)findViewById(R.id.itemslist);
         Log.d("items",items.toString());
       String url= "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=" +items.toString()+"&number=5&ranking=1";
         OkHttpClient client = new OkHttpClient();
@@ -65,8 +71,8 @@ ArrayList<String> items= new ArrayList<String>();
                         @Override
                         public void run() {
                             //Log.d("output",recipelist.toString());
-                            list = (ListView)findViewById(R.id.itemslist);
-                            CustomAdapter customadapter= new CustomAdapter();
+
+
                             list.setAdapter(customadapter); // Stuff that updates the UI
 
                         }
@@ -78,10 +84,20 @@ ArrayList<String> items= new ArrayList<String>();
             }
         });
         //list = (ListView)findViewById(R.id.list);
+list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent recipepagemain= new Intent(recipe.this,MainRecipe.class);
 
+       int x= (int) customadapter.getItemId(position);
+        recipepagemain.putExtra("id",x);
+        startActivity(recipepagemain);
+    }
+});
     }
 class CustomAdapter extends BaseAdapter {
     ImageView imageView;
+    TextView recipeid1;
     int id;
     @Override
     public int getCount() {
@@ -90,18 +106,21 @@ class CustomAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
+
         return null;
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return itemids.get(position);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView =getLayoutInflater().inflate(R.layout.customlayout,null);
         imageView=(ImageView)convertView.findViewById(R.id.itemimage);
+       // recipeid1= (TextView)convertView.findViewById(R.id.recipeid);
+
         TextView name = (TextView)convertView.findViewById(R.id.itemname);
         try {
             JSONObject item=(JSONObject) recipelist.get(position);
@@ -109,19 +128,14 @@ class CustomAdapter extends BaseAdapter {
             String name1=item.getString("title");
             name.setText(name1);
             id=item.getInt("id");
+            //recipeid1.setText(id);
             System.out.println(id);
-            convertView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent recipepage = new Intent(recipe.this,MainRecipe.class);
-                    recipepage.putExtra("id",id);
-                    startActivity(recipepage);
-                }
-            });
+            itemids.add(position,id);
             loadImageFromUrl(img);
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
         return convertView;
     }
 

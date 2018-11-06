@@ -32,4 +32,5 @@
         android:layout_toRightOf="@+id/itemimage"
         android:text="TextView"
         android:textSize="18sp" />
+
 </RelativeLayout>
