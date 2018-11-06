@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+//This is the code for the register page for sending the details of the registered user to the firebase.
+
 public class Register extends AppCompatActivity implements View.OnClickListener {
     EditText password,lastname,firstname,email,phone,confirmpass;
     ProgressDialog pd;
