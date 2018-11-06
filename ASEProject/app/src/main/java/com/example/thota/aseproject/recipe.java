@@ -1,5 +1,6 @@
 package com.example.thota.aseproject;
 
+//This page is used to show the recipies from the available list of items.
 
 import android.content.Intent;
 
