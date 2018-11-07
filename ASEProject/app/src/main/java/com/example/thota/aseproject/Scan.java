@@ -59,9 +59,19 @@ public class Scan extends AppCompatActivity {
         lblResult=(TextView)findViewById(R.id.Result);
         scan=(Button)findViewById(R.id.Scan);
         log=(Button)findViewById(R.id.log);
-       // log.setOnClickListener(v -> {
-
-     //   });
+        add2=(Button)findViewById(R.id.add2);
+        add2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addlistpage=new Intent(Scan.this,addList.class);
+                addlistpage.putExtra("item",lblResult.getText().toString());
+                startActivity(addlistpage);
+            }
+        });
+        log.setOnClickListener(v -> {
+            Intent logout1 = new Intent(Scan.this,MainActivity.class);
+            startActivity(logout1);
+      });
      //  add2.setOnClickListener(v -> {
        //    Intent movetoadd =new Intent(Scan.this,addList.class);
          //  movetoadd.putExtra("item",lblResult.getText().toString());
@@ -83,8 +93,8 @@ public class Scan extends AppCompatActivity {
             ClassifyOptions classifyOptions = new ClassifyOptions.Builder()
                     .imagesFile(finalImageStream)
                     .imagesFilename("fruitbowl.jpg")
-                    .addClassifierId("DefaultCustomModel_1921702135")
-                    .threshold((float) 0.6)
+                    .classifierIds(Collections.singletonList("default"))
+                    .threshold((float) 0.7)
                     .owners(Collections.singletonList("me"))
                     .build();
             ClassifiedImages classifiedImages = visualRecognition.classify(classifyOptions).execute();
@@ -107,20 +117,24 @@ public class Scan extends AppCompatActivity {
                 String res=classifiedImages.toString();
                 //parse json objects
                 try {
-                    JSONObject reader = new JSONObject(res);
+                    JSONObject  reader = new JSONObject(res);
+
                     JSONArray images = reader.getJSONArray("images");
 
                     JSONObject classifier = new JSONObject(images.get(0).toString());
                     JSONArray classifiers1 = classifier.getJSONArray("classifiers");
                     JSONObject classes= new JSONObject(classifiers1.get(0).toString());
+
                     JSONArray x=classes.getJSONArray("classes");
-                    JSONObject class1=new JSONObject(x.get(0).toString());
-                    JSONObject answer=new JSONObject(class1.toString());
-                    String ans= (String) answer.get("class");
+
+                    JSONObject y=new JSONObject(x.get(0).toString());
+
+                    String classname=y.getString("class");
+
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            lblResult.setText(ans);//set the result value to the textview
+                            lblResult.setText(classname);//set the result value to the textview
                         }
                     });
 
@@ -178,8 +192,8 @@ public class Scan extends AppCompatActivity {
         return file.getAbsolutePath();
     }
 
-public void logout(View v){
+/*public void logout(View v){
     Intent logout1 = new Intent(Scan.this,Login.class);
     startActivity(logout1);
-}
+}*/
 }
