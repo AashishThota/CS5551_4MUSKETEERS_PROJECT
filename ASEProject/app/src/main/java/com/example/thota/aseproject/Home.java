@@ -39,7 +39,7 @@ public class Home extends AppCompatActivity {
                 startActivity(scanner);
             }
         });
-        //we are calling the addList activity
+        //we are calling the addList activity which adds items to the list
         additem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
