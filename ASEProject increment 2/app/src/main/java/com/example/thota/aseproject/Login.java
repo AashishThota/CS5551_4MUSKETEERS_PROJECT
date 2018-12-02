@@ -118,7 +118,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
             }
         });
     }
-
+// This is the sign in part.
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -164,6 +164,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
 
         }
 }
+
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
