@@ -71,7 +71,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         }
         else
         {
-            Toast.makeText(this,"Password Miss Match",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Password Miss Match",Toast.LENGTH_SHORT).show();//passwords do not Match
             return;
         }
     }
