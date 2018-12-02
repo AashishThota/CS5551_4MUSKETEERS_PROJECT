@@ -16,7 +16,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-//This page is used for adding items into the list.
+//This page is used for adding items into the list. The user can scan items or enter items manually.
 
 public class addList extends AppCompatActivity {
    static List<String> items= new ArrayList<String>();
