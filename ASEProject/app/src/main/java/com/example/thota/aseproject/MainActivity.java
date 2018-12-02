@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+//This page is the display page of the logo
+
 public class MainActivity extends AppCompatActivity {
 public final int TIME_OUT= 4000;
     @Override
