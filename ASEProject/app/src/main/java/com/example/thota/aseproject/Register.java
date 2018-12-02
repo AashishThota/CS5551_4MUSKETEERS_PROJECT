@@ -39,6 +39,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         firebaseAuth=FirebaseAuth.getInstance();
         signup.setOnClickListener(this);
     }
+    // User details to be filled.
     public void registerUser(){
         String firstname1=firstname.getText().toString().trim();
         String lastname1=lastname.getText().toString().trim();
