@@ -164,7 +164,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
 
         }
 }
-
+// In the case of connection failure.
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
