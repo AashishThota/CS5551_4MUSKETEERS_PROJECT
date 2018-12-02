@@ -177,7 +177,7 @@ public class Scan extends AppCompatActivity {
     }
 
     private String savePath() {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());   //image saving
         String filename = "sample" + timeStamp + ".jpg";
         File file = new File(getFilesDir(), filename);
         try {
