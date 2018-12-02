@@ -67,7 +67,7 @@ public class MainRecipe extends AppCompatActivity {
                         Log.d("i",instructions);
                         if(instructions.isEmpty()){
                         String Sourceurl=res.getString("sourceUrl");
-                        String url1="https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/extract?url="+Sourceurl;
+                        String url1="https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/extract?url="+Sourceurl; //api
                             OkHttpClient client = new OkHttpClient();
                             Request request = new Request.Builder()
                                     .addHeader("X-Mashape-Key", "aqReKEVTCsmshkwxFbj0Onzmjxymp1UP7N0jsnkNPIxWG2YLJb")
