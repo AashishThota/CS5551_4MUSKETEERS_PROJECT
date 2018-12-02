@@ -16,6 +16,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+//This page is useful 
+
 public class addList extends AppCompatActivity {
    static List<String> items= new ArrayList<String>();
     EditText item;
