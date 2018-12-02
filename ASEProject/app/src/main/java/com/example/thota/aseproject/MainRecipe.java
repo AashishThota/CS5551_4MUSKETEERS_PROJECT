@@ -24,6 +24,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+//This page shows the image, title, instructions of the selected recipe.
+
 public class MainRecipe extends AppCompatActivity {
     int id;
     ImageView recipeimage;
