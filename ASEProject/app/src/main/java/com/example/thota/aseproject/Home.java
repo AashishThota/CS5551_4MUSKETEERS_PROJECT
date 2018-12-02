@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+//This page is used for scanning the items and sending the items into the add list page
+
 public class Home extends AppCompatActivity {
     Button scan,additem,upld,log;
     @Override
