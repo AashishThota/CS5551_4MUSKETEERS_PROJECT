@@ -31,7 +31,8 @@
         <activity android:name=".Scan" />
         <activity android:name=".addList" />
         <activity android:name=".recipe" />
-        <activity android:name=".MainRecipe"></activity>
+        <activity android:name=".MainRecipe" />
+        <activity android:name=".uploadrecipe"></activity>
     </application>
 
 </manifest>

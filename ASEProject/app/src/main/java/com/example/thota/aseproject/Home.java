@@ -7,13 +7,29 @@ import android.view.View;
 import android.widget.Button;
 
 public class Home extends AppCompatActivity {
-    Button scan,additem;
+    Button scan,additem,upld,log;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         scan=(Button)findViewById(R.id.ScanButton);
         additem=(Button)findViewById(R.id.addItem);
+        upld=(Button)findViewById(R.id.upload);
+        log=(Button)findViewById(R.id.logot);
+        upld.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent upld= new Intent(Home.this,uploadrecipe.class);
+                startActivity(upld);
+            }
+        });
+        log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main= new Intent(Home.this,MainActivity.class);
+                startActivity(main);
+            }
+        });
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
