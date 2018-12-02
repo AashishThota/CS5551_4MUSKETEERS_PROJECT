@@ -64,7 +64,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
         nrmlsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                firebaseAuth.signInWithEmailAndPassword(email.getText().toString().trim(),password.getText().toString().trim())
+                firebaseAuth.signInWithEmailAndPassword(email.getText().toString().trim(),password.getText().toString().trim())//firebase authentication
                         .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
