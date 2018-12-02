@@ -39,6 +39,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
+//This page is used for scanning the items using camera app and displaying the items name and adding it to the list.
+
 public class Scan extends AppCompatActivity {
     ImageView imageView;
     InputStream finalImageStream;

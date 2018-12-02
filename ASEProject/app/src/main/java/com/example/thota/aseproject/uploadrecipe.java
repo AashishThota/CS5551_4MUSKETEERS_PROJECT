@@ -39,6 +39,8 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+//This page is used for uploading recipies by the user
+
 public class uploadrecipe extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     List<String> ingredients = new ArrayList<String>();
     Spinner ingergedients,quantity;
