@@ -86,6 +86,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener, Go
 
             }
         });
+        // This is the firebase usage part of the code
         LoginManager.getInstance().registerCallback(cbm,
                 new FacebookCallback<LoginResult>() {
                     @Override
