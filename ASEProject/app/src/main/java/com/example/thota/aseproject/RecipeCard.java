@@ -2,6 +2,8 @@ package com.example.thota.aseproject;
 
 import java.util.List;
 
+//This page is used to display details of the selected recipe
+
 public class RecipeCard {
     public String getTitle() {
         return title;
