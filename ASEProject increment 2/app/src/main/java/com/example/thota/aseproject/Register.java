@@ -59,6 +59,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                         Intent intent=new Intent(Register.this,Login.class);
                         startActivity(intent);
                     }
+                   // This is the passoword confirmation code part.
                     else
                     {
                         Toast.makeText(Register.this,"failed to register",Toast.LENGTH_SHORT).show();
