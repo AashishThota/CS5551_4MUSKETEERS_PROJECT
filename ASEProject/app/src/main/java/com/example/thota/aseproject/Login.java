@@ -35,6 +35,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+//This is the login page where we can sign in using credentials or by using facebook and google sign in.
+
 public class Login extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener  {
     private static final int RC_SIGN_IN =9001 ;
     TextView signup1;
