@@ -67,7 +67,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     }
                 }
             });
-
+//Registering process completed
         }
         else
         {
