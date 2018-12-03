@@ -89,7 +89,7 @@ public class MainRecipe extends AppCompatActivity {
                                         runOnUiThread(new Runnable() {
                                             @Override
                                             public void run() {
-                                                instruction.setText(instructions.toString());
+                                                instruction.setText(instructions.toString().trim());
                                             }
                                         });
 

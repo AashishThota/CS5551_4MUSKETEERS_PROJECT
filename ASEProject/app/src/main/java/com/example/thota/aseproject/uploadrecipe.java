@@ -59,12 +59,12 @@ public class uploadrecipe extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_uploadrecipe);
     //    userd = FirebaseDatabase.getInstance().getReference("UserDetails");
         String id = FirebaseAuth.getInstance().getUid();
- ref=FirebaseDatabase.getInstance().getReference().child("recipies");
+ ref=FirebaseDatabase.getInstance().getReference().child("recipes");
         //  ingredients.add("");ingredients.add("");ingredients.add("");ingredients.add("");ingredients.add("");ingredients.add("");ingredients.add("");
         ingergedients=(Spinner)findViewById(R.id.spinner);
         quantity=(Spinner)findViewById(R.id.quanti);
         addin=(Button)findViewById(R.id.addin);
-        imageupload=(Button)findViewById(R.id.imgup);
+
         uplodrec=(Button)findViewById(R.id.addrec);
         title=(EditText)findViewById(R.id.rectitle);
         numofppl=(EditText)findViewById(R.id.serve);
@@ -76,17 +76,12 @@ public class uploadrecipe extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v) {
                 RecipeCard recipecard= new RecipeCard(title.getText().toString(),instructions.getText().toString(),numofppl.getText().toString(),ingredients,time.getText().toString());
                 //userd.setValue(recipecard);
-           ref.setValue(recipecard);
+           ref.child(title.getText().toString()).setValue(recipecard);
 
            Toast.makeText(uploadrecipe.this,"recipe Uploaded",Toast.LENGTH_SHORT).show();
             }
         });
-        imageupload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivityForResult(new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI), 3);
-            }
-        });
+
         addin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -79,6 +79,7 @@ public class addList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 items.add(item.getText().toString());
+                item.setText("");
                 adapter.notifyDataSetChanged();
             }
         });
