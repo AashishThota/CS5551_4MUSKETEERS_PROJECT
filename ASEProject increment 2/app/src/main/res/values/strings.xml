@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">ASEProject</string>
-    <string name="facebook_app_id">1825210487578334</string>
-    <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
-    <string name="signup"><a>Not an user? Sign Up Now</a></string>
-
-</resources>
